@@ -20,7 +20,7 @@ DocuMind AI transforms how businesses interact with documents by combining advan
 
 ## 🚀 Live Demo
 
-**[🎯 Try DocuMind AI Live](https://YOUR-HF-SPACE-LINK-HERE)**
+**[🎯 Try DocuMind AI Live](https://omgupta-ai-documind-ai.hf.space/)**
 
 Upload any document and start asking questions immediately - no signup required!
 
@@ -81,7 +81,7 @@ graph TD
 ## 🚀 Quick Start
 
 ### Option 1: Use Live Demo
-Visit the [live demo](https://YOUR-HF-SPACE-LINK-HERE) - no installation required!
+Visit the [live demo](https://omgupta-ai-documind-ai.hf.space/) - no installation required!
 
 ### Option 2: Local Development
 
@@ -200,10 +200,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**OM GUPTA**
 - **Portfolio**: [Your Portfolio URL]
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Email**: [Your Email]
+- **LinkedIn**: (https://www.linkedin.com/in/om-gupta-428110202/)
+- **Email**: omgupta.connect@gmail.com / gupta.om@northeastern.edu
 
 ---
 
