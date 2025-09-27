@@ -27,18 +27,69 @@ Upload any document and start asking questions immediately - no signup required!
 ## 🏗️ Technical Architecture
 
 ```mermaid
-graph TD
-    A[Document Upload] --> B[Document Processor]
-    B --> C[Text Extraction]
-    C --> D[Text Chunking]
-    D --> E[Vector Embeddings]
-    E --> F[ChromaDB Storage]
-    G[User Question] --> H[Query Embedding]
-    H --> I[Similarity Search]
-    I --> F
-    F --> J[Context Retrieval]
-    J --> K[Gemini AI]
-    K --> L[Generated Answer]
+graph TB
+    subgraph "📱 User Interface Layer"
+        UI[🎨 Gradio Web Interface<br/>Beautiful & Responsive]
+        UP[📤 File Upload Component]
+        CH[💬 Chat Interface]
+        ST[📊 Statistics Dashboard]
+    end
+    
+    subgraph "🔧 Document Processing Pipeline"
+        DP[📄 Multi-Format Processor<br/>PDF • DOCX • Images • Text]
+        TE[🔍 Text Extraction Engine<br/>PyMuPDF + OCR + Native Parsers]
+        TC[✂️ Intelligent Chunking<br/>Context-Aware Splitting]
+        CL[🧹 Text Cleaning<br/>Normalization + Validation]
+    end
+    
+    subgraph "🧠 AI & Vector Processing"
+        VE[🎯 Vector Embeddings<br/>SentenceTransformer<br/>384-dim Vectors]
+        VS[🗄️ ChromaDB Vector Store<br/>Cosine Similarity Search<br/>HNSW Index]
+        QE[🔍 Query Embedding<br/>Same Model Consistency]
+        SS[⚡ Semantic Search<br/>Top-K Retrieval]
+    end
+    
+    subgraph "🤖 AI Response Generation"
+        CR[📚 Context Retrieval<br/>Ranked Results]
+        PP[📝 Prompt Engineering<br/>RAG Template + Context]
+        GM[🚀 Gemini 2.0 Flash<br/>Advanced Language Model]
+        AR[✨ Answer Refinement<br/>Citation + Confidence]
+    end
+    
+    %% User Flow
+    UI --> UP
+    UP --> DP
+    UI --> CH
+    CH --> QE
+    
+    %% Document Processing Flow
+    DP --> TE
+    TE --> CL
+    CL --> TC
+    TC --> VE
+    VE --> VS
+    
+    %% Query Processing Flow
+    QE --> SS
+    SS --> VS
+    VS --> CR
+    
+    %% AI Generation Flow
+    CR --> PP
+    PP --> GM
+    GM --> AR
+    AR --> UI
+    
+    %% Styling
+    classDef uiClass fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
+    classDef processClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef aiClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px,color:#000
+    classDef vectorClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    
+    class UI,UP,CH,ST uiClass
+    class DP,TE,TC,CL processClass
+    class VE,VS,QE,SS vectorClass
+    class CR,PP,GM,AR aiClass
 ```
 
 ### Core Components
