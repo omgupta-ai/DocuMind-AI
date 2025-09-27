@@ -429,7 +429,7 @@ class DocuMindAI:
             stats.append(f"📄 **{doc_name}** ({metadata['file_type']}) - {metadata['chunks_created']} chunks")
             total_chunks += metadata['chunks_created']
         
-        return f"**📊 Document Statistics:**\n\n" + "\n".join(stats) + f"\n\n**Total chunks in database: {total_chunks}**"
+        return f"**Document Statistics:**\n\n" + "\n".join(stats) + f"\n\n**Total chunks in database: {total_chunks}**"
 
 # Initialize the system
 documind_ai = DocuMindAI()
@@ -466,7 +466,7 @@ def answer_question(question, chat_history):
     if result['sources']:
         response += f"**📚 Sources ({len(result['sources'])}):**\n"
         for i, source in enumerate(result['sources'], 1):
-            response += f"{i}. {source['document_name']} (relevance: {source['similarity_score']:.3f})\n"
+            response += f"{i}. {source['document_name']}" #(relevance: {source['similarity_score']:.3f})\n
         #response += f"\n**📊 Confidence: {result['confidence']:.2f}**"
     
     # Update chat history
