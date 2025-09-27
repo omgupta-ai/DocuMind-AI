@@ -1,6 +1,6 @@
 # 🧠 DocuMind AI - Intelligent Document Analysis System
 
-[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue)](https://YOUR-HF-SPACE-LINK-HERE)
+[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue)](https://omgupta-ai-documind-ai.hf.space/)
 [![Python](https://img.shields.io/badge/Python-3.9+-green)](https://python.org)
 [![Gradio](https://img.shields.io/badge/Interface-Gradio-orange)](https://gradio.app)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
